@@ -1,0 +1,15 @@
+{
+  "dart.env": {
+    "ENABLE_FLUTTER_DESKTOP": true
+  },
+  "files.associations": {
+    "*.arb": "json"
+  },
+  "protoc": {
+    "path": "protoc",
+    "options": [
+        "--proto_path=proto/",
+        "--dart_out=lib/grpc/"
+    ]
+  }
+}
