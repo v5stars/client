@@ -4,17 +4,20 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+生成代码
 
-A few resources to get you started if this is your first Flutter project:
+```
+flutter packages pub run build_runner build
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+生成 grpc 定义文件
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+protoc -I proto/ $(find proto/ | grep -E '\.proto$') --dart_out=grpc:lib/grpc
+```
 
-grpc 生成命令
---------
-`protoc -I proto/ $(find proto/ | grep -E '\.proto$') --dart_out=grpc:lib/grpc`
+生成语言定义文件
+
+```
+flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n lib/common/l10n.dart lib/l10n/intl_*.arb
+```
