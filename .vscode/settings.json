@@ -11,5 +11,16 @@
         "--proto_path=proto/",
         "--dart_out=lib/grpc/"
     ]
+  },
+  "files.exclude": {
+    ".dart_tool": true,
+    ".idea": true,
+    "build": true,
+    "fonts": true,
+    "android": true,
+    "ios": true,
+    "linux": true,
+    "macos": true,
+    "windows": true,
   }
 }
