@@ -1,3 +1,6 @@
 [submodule "proto/v2ray.com/core"]
 	path = proto/v2ray.com/core
 	url = https://github.com/shynome/v2ray-proto
+[submodule "proto/v5stars"]
+	path = proto/v5stars
+	url = https://github.com/v5stars/proto.git
