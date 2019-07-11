@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/serial/typed_message.pb.dart' as $3;
+import '../../common/serial/typed_message.pb.dart' as $4;
 
 import 'config.pbenum.dart';
 
@@ -18,7 +18,7 @@ export 'config.pbenum.dart';
 class TransportConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransportConfig', package: const $pb.PackageName('v2ray.core.transport.internet'))
     ..e<TransportProtocol>(1, 'protocol', $pb.PbFieldType.OE, TransportProtocol.TCP, TransportProtocol.valueOf, TransportProtocol.values)
-    ..a<$3.TypedMessage>(2, 'settings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'settings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..aOS(3, 'protocolName')
     ..hasRequiredFields = false
   ;
@@ -42,8 +42,8 @@ class TransportConfig extends $pb.GeneratedMessage {
   $core.bool hasProtocol() => $_has(0);
   void clearProtocol() => clearField(1);
 
-  $3.TypedMessage get settings => $_getN(1);
-  set settings($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get settings => $_getN(1);
+  set settings($4.TypedMessage v) { setField(2, v); }
   $core.bool hasSettings() => $_has(1);
   void clearSettings() => clearField(2);
 
@@ -58,7 +58,7 @@ class StreamConfig extends $pb.GeneratedMessage {
     ..e<TransportProtocol>(1, 'protocol', $pb.PbFieldType.OE, TransportProtocol.TCP, TransportProtocol.valueOf, TransportProtocol.values)
     ..pc<TransportConfig>(2, 'transportSettings', $pb.PbFieldType.PM,TransportConfig.create)
     ..aOS(3, 'securityType')
-    ..pc<$3.TypedMessage>(4, 'securitySettings', $pb.PbFieldType.PM,$3.TypedMessage.create)
+    ..pc<$4.TypedMessage>(4, 'securitySettings', $pb.PbFieldType.PM,$4.TypedMessage.create)
     ..aOS(5, 'protocolName')
     ..a<SocketConfig>(6, 'socketSettings', $pb.PbFieldType.OM, SocketConfig.getDefault, SocketConfig.create)
     ..hasRequiredFields = false
@@ -94,7 +94,7 @@ class StreamConfig extends $pb.GeneratedMessage {
   $core.bool hasSecurityType() => $_has(2);
   void clearSecurityType() => clearField(3);
 
-  $core.List<$3.TypedMessage> get securitySettings => $_getList(3);
+  $core.List<$4.TypedMessage> get securitySettings => $_getList(3);
 
   $core.String get protocolName => $_getS(4, '');
   set protocolName($core.String v) { $_setString(4, v); }

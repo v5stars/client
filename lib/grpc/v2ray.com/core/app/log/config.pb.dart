@@ -10,14 +10,14 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'config.pbenum.dart';
-import '../../common/log/log.pbenum.dart' as $7;
+import '../../common/log/log.pbenum.dart' as $8;
 
 export 'config.pbenum.dart';
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.app.log'))
     ..e<LogType>(1, 'errorLogType', $pb.PbFieldType.OE, LogType.None, LogType.valueOf, LogType.values)
-    ..e<$7.Severity>(2, 'errorLogLevel', $pb.PbFieldType.OE, $7.Severity.Unknown, $7.Severity.valueOf, $7.Severity.values)
+    ..e<$8.Severity>(2, 'errorLogLevel', $pb.PbFieldType.OE, $8.Severity.Unknown, $8.Severity.valueOf, $8.Severity.values)
     ..aOS(3, 'errorLogPath')
     ..e<LogType>(4, 'accessLogType', $pb.PbFieldType.OE, LogType.None, LogType.valueOf, LogType.values)
     ..aOS(5, 'accessLogPath')
@@ -43,8 +43,8 @@ class Config extends $pb.GeneratedMessage {
   $core.bool hasErrorLogType() => $_has(0);
   void clearErrorLogType() => clearField(1);
 
-  $7.Severity get errorLogLevel => $_getN(1);
-  set errorLogLevel($7.Severity v) { setField(2, v); }
+  $8.Severity get errorLogLevel => $_getN(1);
+  set errorLogLevel($8.Severity v) { setField(2, v); }
   $core.bool hasErrorLogLevel() => $_has(1);
   void clearErrorLogLevel() => clearField(2);
 

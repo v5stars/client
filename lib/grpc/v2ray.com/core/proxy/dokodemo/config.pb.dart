@@ -9,20 +9,20 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/net/address.pb.dart' as $4;
-import '../../common/net/network.pb.dart' as $5;
+import '../../common/net/address.pb.dart' as $5;
+import '../../common/net/network.pb.dart' as $6;
 
-import '../../common/net/network.pbenum.dart' as $5;
+import '../../common/net/network.pbenum.dart' as $6;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.proxy.dokodemo'))
-    ..a<$4.IPOrDomain>(1, 'address', $pb.PbFieldType.OM, $4.IPOrDomain.getDefault, $4.IPOrDomain.create)
+    ..a<$5.IPOrDomain>(1, 'address', $pb.PbFieldType.OM, $5.IPOrDomain.getDefault, $5.IPOrDomain.create)
     ..a<$core.int>(2, 'port', $pb.PbFieldType.OU3)
-    ..a<$5.NetworkList>(3, 'networkList', $pb.PbFieldType.OM, $5.NetworkList.getDefault, $5.NetworkList.create)
+    ..a<$6.NetworkList>(3, 'networkList', $pb.PbFieldType.OM, $6.NetworkList.getDefault, $6.NetworkList.create)
     ..a<$core.int>(4, 'timeout', $pb.PbFieldType.OU3)
     ..aOB(5, 'followRedirect')
     ..a<$core.int>(6, 'userLevel', $pb.PbFieldType.OU3)
-    ..pc<$5.Network>(7, 'networks', $pb.PbFieldType.PE, null, $5.Network.valueOf, $5.Network.values)
+    ..pc<$6.Network>(7, 'networks', $pb.PbFieldType.PE, null, $6.Network.valueOf, $6.Network.values)
     ..hasRequiredFields = false
   ;
 
@@ -40,8 +40,8 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $4.IPOrDomain get address => $_getN(0);
-  set address($4.IPOrDomain v) { setField(1, v); }
+  $5.IPOrDomain get address => $_getN(0);
+  set address($5.IPOrDomain v) { setField(1, v); }
   $core.bool hasAddress() => $_has(0);
   void clearAddress() => clearField(1);
 
@@ -51,9 +51,9 @@ class Config extends $pb.GeneratedMessage {
   void clearPort() => clearField(2);
 
   @$core.Deprecated('This field is deprecated.')
-  $5.NetworkList get networkList => $_getN(2);
+  $6.NetworkList get networkList => $_getN(2);
   @$core.Deprecated('This field is deprecated.')
-  set networkList($5.NetworkList v) { setField(3, v); }
+  set networkList($6.NetworkList v) { setField(3, v); }
   @$core.Deprecated('This field is deprecated.')
   $core.bool hasNetworkList() => $_has(2);
   @$core.Deprecated('This field is deprecated.')
@@ -78,6 +78,6 @@ class Config extends $pb.GeneratedMessage {
   $core.bool hasUserLevel() => $_has(5);
   void clearUserLevel() => clearField(6);
 
-  $core.List<$5.Network> get networks => $_getList(6);
+  $core.List<$6.Network> get networks => $_getList(6);
 }
 

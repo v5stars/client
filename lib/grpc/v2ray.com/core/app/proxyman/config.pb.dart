@@ -9,10 +9,10 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/net/port.pb.dart' as $12;
-import '../../common/net/address.pb.dart' as $4;
-import '../../transport/internet/config.pb.dart' as $8;
-import '../../common/serial/typed_message.pb.dart' as $3;
+import '../../common/net/port.pb.dart' as $13;
+import '../../common/net/address.pb.dart' as $5;
+import '../../transport/internet/config.pb.dart' as $9;
+import '../../common/serial/typed_message.pb.dart' as $4;
 
 import 'config.pbenum.dart';
 
@@ -159,10 +159,10 @@ class SniffingConfig extends $pb.GeneratedMessage {
 
 class ReceiverConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReceiverConfig', package: const $pb.PackageName('v2ray.core.app.proxyman'))
-    ..a<$12.PortRange>(1, 'portRange', $pb.PbFieldType.OM, $12.PortRange.getDefault, $12.PortRange.create)
-    ..a<$4.IPOrDomain>(2, 'listen', $pb.PbFieldType.OM, $4.IPOrDomain.getDefault, $4.IPOrDomain.create)
+    ..a<$13.PortRange>(1, 'portRange', $pb.PbFieldType.OM, $13.PortRange.getDefault, $13.PortRange.create)
+    ..a<$5.IPOrDomain>(2, 'listen', $pb.PbFieldType.OM, $5.IPOrDomain.getDefault, $5.IPOrDomain.create)
     ..a<AllocationStrategy>(3, 'allocationStrategy', $pb.PbFieldType.OM, AllocationStrategy.getDefault, AllocationStrategy.create)
-    ..a<$8.StreamConfig>(4, 'streamSettings', $pb.PbFieldType.OM, $8.StreamConfig.getDefault, $8.StreamConfig.create)
+    ..a<$9.StreamConfig>(4, 'streamSettings', $pb.PbFieldType.OM, $9.StreamConfig.getDefault, $9.StreamConfig.create)
     ..aOB(5, 'receiveOriginalDestination')
     ..pc<KnownProtocols>(7, 'domainOverride', $pb.PbFieldType.PE, null, KnownProtocols.valueOf, KnownProtocols.values)
     ..a<SniffingConfig>(8, 'sniffingSettings', $pb.PbFieldType.OM, SniffingConfig.getDefault, SniffingConfig.create)
@@ -183,13 +183,13 @@ class ReceiverConfig extends $pb.GeneratedMessage {
   static ReceiverConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ReceiverConfig _defaultInstance;
 
-  $12.PortRange get portRange => $_getN(0);
-  set portRange($12.PortRange v) { setField(1, v); }
+  $13.PortRange get portRange => $_getN(0);
+  set portRange($13.PortRange v) { setField(1, v); }
   $core.bool hasPortRange() => $_has(0);
   void clearPortRange() => clearField(1);
 
-  $4.IPOrDomain get listen => $_getN(1);
-  set listen($4.IPOrDomain v) { setField(2, v); }
+  $5.IPOrDomain get listen => $_getN(1);
+  set listen($5.IPOrDomain v) { setField(2, v); }
   $core.bool hasListen() => $_has(1);
   void clearListen() => clearField(2);
 
@@ -198,8 +198,8 @@ class ReceiverConfig extends $pb.GeneratedMessage {
   $core.bool hasAllocationStrategy() => $_has(2);
   void clearAllocationStrategy() => clearField(3);
 
-  $8.StreamConfig get streamSettings => $_getN(3);
-  set streamSettings($8.StreamConfig v) { setField(4, v); }
+  $9.StreamConfig get streamSettings => $_getN(3);
+  set streamSettings($9.StreamConfig v) { setField(4, v); }
   $core.bool hasStreamSettings() => $_has(3);
   void clearStreamSettings() => clearField(4);
 
@@ -220,8 +220,8 @@ class ReceiverConfig extends $pb.GeneratedMessage {
 class InboundHandlerConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InboundHandlerConfig', package: const $pb.PackageName('v2ray.core.app.proxyman'))
     ..aOS(1, 'tag')
-    ..a<$3.TypedMessage>(2, 'receiverSettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
-    ..a<$3.TypedMessage>(3, 'proxySettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'receiverSettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
+    ..a<$4.TypedMessage>(3, 'proxySettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -244,13 +244,13 @@ class InboundHandlerConfig extends $pb.GeneratedMessage {
   $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
-  $3.TypedMessage get receiverSettings => $_getN(1);
-  set receiverSettings($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get receiverSettings => $_getN(1);
+  set receiverSettings($4.TypedMessage v) { setField(2, v); }
   $core.bool hasReceiverSettings() => $_has(1);
   void clearReceiverSettings() => clearField(2);
 
-  $3.TypedMessage get proxySettings => $_getN(2);
-  set proxySettings($3.TypedMessage v) { setField(3, v); }
+  $4.TypedMessage get proxySettings => $_getN(2);
+  set proxySettings($4.TypedMessage v) { setField(3, v); }
   $core.bool hasProxySettings() => $_has(2);
   void clearProxySettings() => clearField(3);
 }
@@ -277,9 +277,9 @@ class OutboundConfig extends $pb.GeneratedMessage {
 
 class SenderConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SenderConfig', package: const $pb.PackageName('v2ray.core.app.proxyman'))
-    ..a<$4.IPOrDomain>(1, 'via', $pb.PbFieldType.OM, $4.IPOrDomain.getDefault, $4.IPOrDomain.create)
-    ..a<$8.StreamConfig>(2, 'streamSettings', $pb.PbFieldType.OM, $8.StreamConfig.getDefault, $8.StreamConfig.create)
-    ..a<$8.ProxyConfig>(3, 'proxySettings', $pb.PbFieldType.OM, $8.ProxyConfig.getDefault, $8.ProxyConfig.create)
+    ..a<$5.IPOrDomain>(1, 'via', $pb.PbFieldType.OM, $5.IPOrDomain.getDefault, $5.IPOrDomain.create)
+    ..a<$9.StreamConfig>(2, 'streamSettings', $pb.PbFieldType.OM, $9.StreamConfig.getDefault, $9.StreamConfig.create)
+    ..a<$9.ProxyConfig>(3, 'proxySettings', $pb.PbFieldType.OM, $9.ProxyConfig.getDefault, $9.ProxyConfig.create)
     ..a<MultiplexingConfig>(4, 'multiplexSettings', $pb.PbFieldType.OM, MultiplexingConfig.getDefault, MultiplexingConfig.create)
     ..hasRequiredFields = false
   ;
@@ -298,18 +298,18 @@ class SenderConfig extends $pb.GeneratedMessage {
   static SenderConfig getDefault() => _defaultInstance ??= create()..freeze();
   static SenderConfig _defaultInstance;
 
-  $4.IPOrDomain get via => $_getN(0);
-  set via($4.IPOrDomain v) { setField(1, v); }
+  $5.IPOrDomain get via => $_getN(0);
+  set via($5.IPOrDomain v) { setField(1, v); }
   $core.bool hasVia() => $_has(0);
   void clearVia() => clearField(1);
 
-  $8.StreamConfig get streamSettings => $_getN(1);
-  set streamSettings($8.StreamConfig v) { setField(2, v); }
+  $9.StreamConfig get streamSettings => $_getN(1);
+  set streamSettings($9.StreamConfig v) { setField(2, v); }
   $core.bool hasStreamSettings() => $_has(1);
   void clearStreamSettings() => clearField(2);
 
-  $8.ProxyConfig get proxySettings => $_getN(2);
-  set proxySettings($8.ProxyConfig v) { setField(3, v); }
+  $9.ProxyConfig get proxySettings => $_getN(2);
+  set proxySettings($9.ProxyConfig v) { setField(3, v); }
   $core.bool hasProxySettings() => $_has(2);
   void clearProxySettings() => clearField(3);
 

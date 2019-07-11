@@ -9,8 +9,8 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/net/address.pb.dart' as $4;
-import '../../common/protocol/server_spec.pb.dart' as $13;
+import '../../common/net/address.pb.dart' as $5;
+import '../../common/protocol/server_spec.pb.dart' as $14;
 
 import 'config.pbenum.dart';
 
@@ -52,7 +52,7 @@ class ServerConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerConfig', package: const $pb.PackageName('v2ray.core.proxy.socks'))
     ..e<AuthType>(1, 'authType', $pb.PbFieldType.OE, AuthType.NO_AUTH, AuthType.valueOf, AuthType.values)
     ..m<$core.String, $core.String>(2, 'accounts', 'ServerConfig.AccountsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OS, null, null, null , const $pb.PackageName('v2ray.core.proxy.socks'))
-    ..a<$4.IPOrDomain>(3, 'address', $pb.PbFieldType.OM, $4.IPOrDomain.getDefault, $4.IPOrDomain.create)
+    ..a<$5.IPOrDomain>(3, 'address', $pb.PbFieldType.OM, $5.IPOrDomain.getDefault, $5.IPOrDomain.create)
     ..aOB(4, 'udpEnabled')
     ..a<$core.int>(5, 'timeout', $pb.PbFieldType.OU3)
     ..a<$core.int>(6, 'userLevel', $pb.PbFieldType.OU3)
@@ -80,8 +80,8 @@ class ServerConfig extends $pb.GeneratedMessage {
 
   $core.Map<$core.String, $core.String> get accounts => $_getMap(1);
 
-  $4.IPOrDomain get address => $_getN(2);
-  set address($4.IPOrDomain v) { setField(3, v); }
+  $5.IPOrDomain get address => $_getN(2);
+  set address($5.IPOrDomain v) { setField(3, v); }
   $core.bool hasAddress() => $_has(2);
   void clearAddress() => clearField(3);
 
@@ -107,7 +107,7 @@ class ServerConfig extends $pb.GeneratedMessage {
 
 class ClientConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClientConfig', package: const $pb.PackageName('v2ray.core.proxy.socks'))
-    ..pc<$13.ServerEndpoint>(1, 'server', $pb.PbFieldType.PM,$13.ServerEndpoint.create)
+    ..pc<$14.ServerEndpoint>(1, 'server', $pb.PbFieldType.PM,$14.ServerEndpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -125,6 +125,6 @@ class ClientConfig extends $pb.GeneratedMessage {
   static ClientConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ClientConfig _defaultInstance;
 
-  $core.List<$13.ServerEndpoint> get server => $_getList(0);
+  $core.List<$14.ServerEndpoint> get server => $_getList(0);
 }
 

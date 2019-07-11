@@ -9,12 +9,12 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/serial/typed_message.pb.dart' as $3;
+import '../../common/serial/typed_message.pb.dart' as $4;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.app.commander'))
     ..aOS(1, 'tag')
-    ..pc<$3.TypedMessage>(2, 'service', $pb.PbFieldType.PM,$3.TypedMessage.create)
+    ..pc<$4.TypedMessage>(2, 'service', $pb.PbFieldType.PM,$4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -37,6 +37,6 @@ class Config extends $pb.GeneratedMessage {
   $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
-  $core.List<$3.TypedMessage> get service => $_getList(1);
+  $core.List<$4.TypedMessage> get service => $_getList(1);
 }
 

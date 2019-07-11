@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/protocol/user.pb.dart' as $10;
+import '../../common/protocol/user.pb.dart' as $11;
 
 class Account extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Account', package: const $pb.PackageName('v2ray.core.proxy.mtproto'))
@@ -39,7 +39,7 @@ class Account extends $pb.GeneratedMessage {
 
 class ServerConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServerConfig', package: const $pb.PackageName('v2ray.core.proxy.mtproto'))
-    ..pc<$10.User>(1, 'user', $pb.PbFieldType.PM,$10.User.create)
+    ..pc<$11.User>(1, 'user', $pb.PbFieldType.PM,$11.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -57,7 +57,7 @@ class ServerConfig extends $pb.GeneratedMessage {
   static ServerConfig getDefault() => _defaultInstance ??= create()..freeze();
   static ServerConfig _defaultInstance;
 
-  $core.List<$10.User> get user => $_getList(0);
+  $core.List<$11.User> get user => $_getList(0);
 }
 
 class ClientConfig extends $pb.GeneratedMessage {

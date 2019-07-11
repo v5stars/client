@@ -9,11 +9,11 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'internet/config.pb.dart' as $8;
+import 'internet/config.pb.dart' as $9;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport'))
-    ..pc<$8.TransportConfig>(1, 'transportSettings', $pb.PbFieldType.PM,$8.TransportConfig.create)
+    ..pc<$9.TransportConfig>(1, 'transportSettings', $pb.PbFieldType.PM,$9.TransportConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -31,6 +31,6 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $core.List<$8.TransportConfig> get transportSettings => $_getList(0);
+  $core.List<$9.TransportConfig> get transportSettings => $_getList(0);
 }
 

@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/protocol/user.pb.dart' as $10;
+import '../../../common/protocol/user.pb.dart' as $11;
 
 class DetourConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetourConfig', package: const $pb.PackageName('v2ray.core.proxy.vmess.inbound'))
@@ -71,7 +71,7 @@ class DefaultConfig extends $pb.GeneratedMessage {
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.proxy.vmess.inbound'))
-    ..pc<$10.User>(1, 'user', $pb.PbFieldType.PM,$10.User.create)
+    ..pc<$11.User>(1, 'user', $pb.PbFieldType.PM,$11.User.create)
     ..a<DefaultConfig>(2, 'default_2', $pb.PbFieldType.OM, DefaultConfig.getDefault, DefaultConfig.create)
     ..a<DetourConfig>(3, 'detour', $pb.PbFieldType.OM, DetourConfig.getDefault, DetourConfig.create)
     ..aOB(4, 'secureEncryptionOnly')
@@ -92,7 +92,7 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $core.List<$10.User> get user => $_getList(0);
+  $core.List<$11.User> get user => $_getList(0);
 
   DefaultConfig get default_2 => $_getN(1);
   set default_2(DefaultConfig v) { setField(2, v); }

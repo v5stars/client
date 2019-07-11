@@ -9,11 +9,11 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/net/destination.pb.dart' as $6;
+import '../../common/net/destination.pb.dart' as $7;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.proxy.dns'))
-    ..a<$6.Endpoint>(1, 'server', $pb.PbFieldType.OM, $6.Endpoint.getDefault, $6.Endpoint.create)
+    ..a<$7.Endpoint>(1, 'server', $pb.PbFieldType.OM, $7.Endpoint.getDefault, $7.Endpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -31,8 +31,8 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $6.Endpoint get server => $_getN(0);
-  set server($6.Endpoint v) { setField(1, v); }
+  $7.Endpoint get server => $_getN(0);
+  set server($7.Endpoint v) { setField(1, v); }
   $core.bool hasServer() => $_has(0);
   void clearServer() => clearField(1);
 }

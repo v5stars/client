@@ -9,8 +9,8 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/net/destination.pb.dart' as $6;
-import '../../common/net/address.pb.dart' as $4;
+import '../../common/net/destination.pb.dart' as $7;
+import '../../common/net/address.pb.dart' as $5;
 
 import 'config.pbenum.dart';
 
@@ -50,7 +50,7 @@ class NameServer_PriorityDomain extends $pb.GeneratedMessage {
 
 class NameServer extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NameServer', package: const $pb.PackageName('v2ray.core.app.dns'))
-    ..a<$6.Endpoint>(1, 'address', $pb.PbFieldType.OM, $6.Endpoint.getDefault, $6.Endpoint.create)
+    ..a<$7.Endpoint>(1, 'address', $pb.PbFieldType.OM, $7.Endpoint.getDefault, $7.Endpoint.create)
     ..pc<NameServer_PriorityDomain>(2, 'prioritizedDomain', $pb.PbFieldType.PM,NameServer_PriorityDomain.create)
     ..hasRequiredFields = false
   ;
@@ -69,8 +69,8 @@ class NameServer extends $pb.GeneratedMessage {
   static NameServer getDefault() => _defaultInstance ??= create()..freeze();
   static NameServer _defaultInstance;
 
-  $6.Endpoint get address => $_getN(0);
-  set address($6.Endpoint v) { setField(1, v); }
+  $7.Endpoint get address => $_getN(0);
+  set address($7.Endpoint v) { setField(1, v); }
   $core.bool hasAddress() => $_has(0);
   void clearAddress() => clearField(1);
 
@@ -120,8 +120,8 @@ class Config_HostMapping extends $pb.GeneratedMessage {
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.app.dns'))
-    ..pc<$6.Endpoint>(1, 'nameServers', $pb.PbFieldType.PM,$6.Endpoint.create)
-    ..m<$core.String, $4.IPOrDomain>(2, 'hosts', 'Config.HostsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, $4.IPOrDomain.create, null, null , const $pb.PackageName('v2ray.core.app.dns'))
+    ..pc<$7.Endpoint>(1, 'nameServers', $pb.PbFieldType.PM,$7.Endpoint.create)
+    ..m<$core.String, $5.IPOrDomain>(2, 'hosts', 'Config.HostsEntry',$pb.PbFieldType.OS, $pb.PbFieldType.OM, $5.IPOrDomain.create, null, null , const $pb.PackageName('v2ray.core.app.dns'))
     ..a<$core.List<$core.int>>(3, 'clientIp', $pb.PbFieldType.OY)
     ..pc<Config_HostMapping>(4, 'staticHosts', $pb.PbFieldType.PM,Config_HostMapping.create)
     ..pc<NameServer>(5, 'nameServer', $pb.PbFieldType.PM,NameServer.create)
@@ -144,10 +144,10 @@ class Config extends $pb.GeneratedMessage {
   static Config _defaultInstance;
 
   @$core.Deprecated('This field is deprecated.')
-  $core.List<$6.Endpoint> get nameServers => $_getList(0);
+  $core.List<$7.Endpoint> get nameServers => $_getList(0);
 
   @$core.Deprecated('This field is deprecated.')
-  $core.Map<$core.String, $4.IPOrDomain> get hosts => $_getMap(1);
+  $core.Map<$core.String, $5.IPOrDomain> get hosts => $_getMap(1);
 
   $core.List<$core.int> get clientIp => $_getN(2);
   set clientIp($core.List<$core.int> v) { $_setBytes(2, v); }

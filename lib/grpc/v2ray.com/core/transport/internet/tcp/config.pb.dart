@@ -9,11 +9,11 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/serial/typed_message.pb.dart' as $3;
+import '../../../common/serial/typed_message.pb.dart' as $4;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport.internet.tcp'))
-    ..a<$3.TypedMessage>(2, 'headerSettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'headerSettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -31,8 +31,8 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $3.TypedMessage get headerSettings => $_getN(0);
-  set headerSettings($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get headerSettings => $_getN(0);
+  set headerSettings($4.TypedMessage v) { setField(2, v); }
   $core.bool hasHeaderSettings() => $_has(0);
   void clearHeaderSettings() => clearField(2);
 }

@@ -9,14 +9,14 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/protocol/headers.pb.dart' as $14;
-import '../../../common/serial/typed_message.pb.dart' as $3;
+import '../../../common/protocol/headers.pb.dart' as $15;
+import '../../../common/serial/typed_message.pb.dart' as $4;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.transport.internet.quic'))
     ..aOS(1, 'key')
-    ..a<$14.SecurityConfig>(2, 'security', $pb.PbFieldType.OM, $14.SecurityConfig.getDefault, $14.SecurityConfig.create)
-    ..a<$3.TypedMessage>(3, 'header', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$15.SecurityConfig>(2, 'security', $pb.PbFieldType.OM, $15.SecurityConfig.getDefault, $15.SecurityConfig.create)
+    ..a<$4.TypedMessage>(3, 'header', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -39,13 +39,13 @@ class Config extends $pb.GeneratedMessage {
   $core.bool hasKey() => $_has(0);
   void clearKey() => clearField(1);
 
-  $14.SecurityConfig get security => $_getN(1);
-  set security($14.SecurityConfig v) { setField(2, v); }
+  $15.SecurityConfig get security => $_getN(1);
+  set security($15.SecurityConfig v) { setField(2, v); }
   $core.bool hasSecurity() => $_has(1);
   void clearSecurity() => clearField(2);
 
-  $3.TypedMessage get header => $_getN(2);
-  set header($3.TypedMessage v) { setField(3, v); }
+  $4.TypedMessage get header => $_getN(2);
+  set header($4.TypedMessage v) { setField(3, v); }
   $core.bool hasHeader() => $_has(2);
   void clearHeader() => clearField(3);
 }

@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../common/serial/typed_message.pb.dart' as $3;
+import '../../common/serial/typed_message.pb.dart' as $4;
 
 class NoneResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NoneResponse', package: const $pb.PackageName('v2ray.core.proxy.blackhole'))
@@ -53,7 +53,7 @@ class HTTPResponse extends $pb.GeneratedMessage {
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.proxy.blackhole'))
-    ..a<$3.TypedMessage>(1, 'response', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(1, 'response', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -71,8 +71,8 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $3.TypedMessage get response => $_getN(0);
-  set response($3.TypedMessage v) { setField(1, v); }
+  $4.TypedMessage get response => $_getN(0);
+  set response($4.TypedMessage v) { setField(1, v); }
   $core.bool hasResponse() => $_has(0);
   void clearResponse() => clearField(1);
 }

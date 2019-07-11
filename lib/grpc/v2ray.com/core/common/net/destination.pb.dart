@@ -9,14 +9,14 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'address.pb.dart' as $4;
+import 'address.pb.dart' as $5;
 
-import 'network.pbenum.dart' as $5;
+import 'network.pbenum.dart' as $6;
 
 class Endpoint extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Endpoint', package: const $pb.PackageName('v2ray.core.common.net'))
-    ..e<$5.Network>(1, 'network', $pb.PbFieldType.OE, $5.Network.Unknown, $5.Network.valueOf, $5.Network.values)
-    ..a<$4.IPOrDomain>(2, 'address', $pb.PbFieldType.OM, $4.IPOrDomain.getDefault, $4.IPOrDomain.create)
+    ..e<$6.Network>(1, 'network', $pb.PbFieldType.OE, $6.Network.Unknown, $6.Network.valueOf, $6.Network.values)
+    ..a<$5.IPOrDomain>(2, 'address', $pb.PbFieldType.OM, $5.IPOrDomain.getDefault, $5.IPOrDomain.create)
     ..a<$core.int>(3, 'port', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
@@ -35,13 +35,13 @@ class Endpoint extends $pb.GeneratedMessage {
   static Endpoint getDefault() => _defaultInstance ??= create()..freeze();
   static Endpoint _defaultInstance;
 
-  $5.Network get network => $_getN(0);
-  set network($5.Network v) { setField(1, v); }
+  $6.Network get network => $_getN(0);
+  set network($6.Network v) { setField(1, v); }
   $core.bool hasNetwork() => $_has(0);
   void clearNetwork() => clearField(1);
 
-  $4.IPOrDomain get address => $_getN(1);
-  set address($4.IPOrDomain v) { setField(2, v); }
+  $5.IPOrDomain get address => $_getN(1);
+  set address($5.IPOrDomain v) { setField(2, v); }
   $core.bool hasAddress() => $_has(1);
   void clearAddress() => clearField(2);
 

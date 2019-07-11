@@ -9,7 +9,7 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/serial/typed_message.pb.dart' as $3;
+import '../../../common/serial/typed_message.pb.dart' as $4;
 
 class MTU extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MTU', package: const $pb.PackageName('v2ray.core.transport.internet.kcp'))
@@ -202,7 +202,7 @@ class Config extends $pb.GeneratedMessage {
     ..aOB(5, 'congestion')
     ..a<WriteBuffer>(6, 'writeBuffer', $pb.PbFieldType.OM, WriteBuffer.getDefault, WriteBuffer.create)
     ..a<ReadBuffer>(7, 'readBuffer', $pb.PbFieldType.OM, ReadBuffer.getDefault, ReadBuffer.create)
-    ..a<$3.TypedMessage>(8, 'headerConfig', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(8, 'headerConfig', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -255,8 +255,8 @@ class Config extends $pb.GeneratedMessage {
   $core.bool hasReadBuffer() => $_has(6);
   void clearReadBuffer() => clearField(7);
 
-  $3.TypedMessage get headerConfig => $_getN(7);
-  set headerConfig($3.TypedMessage v) { setField(8, v); }
+  $4.TypedMessage get headerConfig => $_getN(7);
+  set headerConfig($4.TypedMessage v) { setField(8, v); }
   $core.bool hasHeaderConfig() => $_has(7);
   void clearHeaderConfig() => clearField(8);
 }

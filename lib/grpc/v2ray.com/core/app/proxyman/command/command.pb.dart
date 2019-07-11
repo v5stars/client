@@ -9,13 +9,13 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/protocol/user.pb.dart' as $10;
-import '../../../config.pb.dart' as $11;
-import '../../../common/serial/typed_message.pb.dart' as $3;
+import '../../../common/protocol/user.pb.dart' as $11;
+import '../../../config.pb.dart' as $12;
+import '../../../common/serial/typed_message.pb.dart' as $4;
 
 class AddUserOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddUserOperation', package: const $pb.PackageName('v2ray.core.app.proxyman.command'))
-    ..a<$10.User>(1, 'user', $pb.PbFieldType.OM, $10.User.getDefault, $10.User.create)
+    ..a<$11.User>(1, 'user', $pb.PbFieldType.OM, $11.User.getDefault, $11.User.create)
     ..hasRequiredFields = false
   ;
 
@@ -33,8 +33,8 @@ class AddUserOperation extends $pb.GeneratedMessage {
   static AddUserOperation getDefault() => _defaultInstance ??= create()..freeze();
   static AddUserOperation _defaultInstance;
 
-  $10.User get user => $_getN(0);
-  set user($10.User v) { setField(1, v); }
+  $11.User get user => $_getN(0);
+  set user($11.User v) { setField(1, v); }
   $core.bool hasUser() => $_has(0);
   void clearUser() => clearField(1);
 }
@@ -67,7 +67,7 @@ class RemoveUserOperation extends $pb.GeneratedMessage {
 
 class AddInboundRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddInboundRequest', package: const $pb.PackageName('v2ray.core.app.proxyman.command'))
-    ..a<$11.InboundHandlerConfig>(1, 'inbound', $pb.PbFieldType.OM, $11.InboundHandlerConfig.getDefault, $11.InboundHandlerConfig.create)
+    ..a<$12.InboundHandlerConfig>(1, 'inbound', $pb.PbFieldType.OM, $12.InboundHandlerConfig.getDefault, $12.InboundHandlerConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -85,8 +85,8 @@ class AddInboundRequest extends $pb.GeneratedMessage {
   static AddInboundRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AddInboundRequest _defaultInstance;
 
-  $11.InboundHandlerConfig get inbound => $_getN(0);
-  set inbound($11.InboundHandlerConfig v) { setField(1, v); }
+  $12.InboundHandlerConfig get inbound => $_getN(0);
+  set inbound($12.InboundHandlerConfig v) { setField(1, v); }
   $core.bool hasInbound() => $_has(0);
   void clearInbound() => clearField(1);
 }
@@ -160,7 +160,7 @@ class RemoveInboundResponse extends $pb.GeneratedMessage {
 class AlterInboundRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AlterInboundRequest', package: const $pb.PackageName('v2ray.core.app.proxyman.command'))
     ..aOS(1, 'tag')
-    ..a<$3.TypedMessage>(2, 'operation', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'operation', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -183,8 +183,8 @@ class AlterInboundRequest extends $pb.GeneratedMessage {
   $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
-  $3.TypedMessage get operation => $_getN(1);
-  set operation($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get operation => $_getN(1);
+  set operation($4.TypedMessage v) { setField(2, v); }
   $core.bool hasOperation() => $_has(1);
   void clearOperation() => clearField(2);
 }
@@ -211,7 +211,7 @@ class AlterInboundResponse extends $pb.GeneratedMessage {
 
 class AddOutboundRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddOutboundRequest', package: const $pb.PackageName('v2ray.core.app.proxyman.command'))
-    ..a<$11.OutboundHandlerConfig>(1, 'outbound', $pb.PbFieldType.OM, $11.OutboundHandlerConfig.getDefault, $11.OutboundHandlerConfig.create)
+    ..a<$12.OutboundHandlerConfig>(1, 'outbound', $pb.PbFieldType.OM, $12.OutboundHandlerConfig.getDefault, $12.OutboundHandlerConfig.create)
     ..hasRequiredFields = false
   ;
 
@@ -229,8 +229,8 @@ class AddOutboundRequest extends $pb.GeneratedMessage {
   static AddOutboundRequest getDefault() => _defaultInstance ??= create()..freeze();
   static AddOutboundRequest _defaultInstance;
 
-  $11.OutboundHandlerConfig get outbound => $_getN(0);
-  set outbound($11.OutboundHandlerConfig v) { setField(1, v); }
+  $12.OutboundHandlerConfig get outbound => $_getN(0);
+  set outbound($12.OutboundHandlerConfig v) { setField(1, v); }
   $core.bool hasOutbound() => $_has(0);
   void clearOutbound() => clearField(1);
 }
@@ -304,7 +304,7 @@ class RemoveOutboundResponse extends $pb.GeneratedMessage {
 class AlterOutboundRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AlterOutboundRequest', package: const $pb.PackageName('v2ray.core.app.proxyman.command'))
     ..aOS(1, 'tag')
-    ..a<$3.TypedMessage>(2, 'operation', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'operation', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -327,8 +327,8 @@ class AlterOutboundRequest extends $pb.GeneratedMessage {
   $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
-  $3.TypedMessage get operation => $_getN(1);
-  set operation($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get operation => $_getN(1);
+  set operation($4.TypedMessage v) { setField(2, v); }
   $core.bool hasOperation() => $_has(1);
   void clearOperation() => clearField(2);
 }

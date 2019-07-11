@@ -9,13 +9,13 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../serial/typed_message.pb.dart' as $3;
+import '../serial/typed_message.pb.dart' as $4;
 
 class User extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('User', package: const $pb.PackageName('v2ray.core.common.protocol'))
     ..a<$core.int>(1, 'level', $pb.PbFieldType.OU3)
     ..aOS(2, 'email')
-    ..a<$3.TypedMessage>(3, 'account', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(3, 'account', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -43,8 +43,8 @@ class User extends $pb.GeneratedMessage {
   $core.bool hasEmail() => $_has(1);
   void clearEmail() => clearField(2);
 
-  $3.TypedMessage get account => $_getN(2);
-  set account($3.TypedMessage v) { setField(3, v); }
+  $4.TypedMessage get account => $_getN(2);
+  set account($4.TypedMessage v) { setField(3, v); }
   $core.bool hasAccount() => $_has(2);
   void clearAccount() => clearField(3);
 }

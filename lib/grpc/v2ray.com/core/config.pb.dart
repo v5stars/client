@@ -10,16 +10,16 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 import 'package:fixnum/fixnum.dart';
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'common/serial/typed_message.pb.dart' as $3;
-import 'transport/config.pb.dart' as $9;
+import 'common/serial/typed_message.pb.dart' as $4;
+import 'transport/config.pb.dart' as $10;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core'))
     ..pc<InboundHandlerConfig>(1, 'inbound', $pb.PbFieldType.PM,InboundHandlerConfig.create)
     ..pc<OutboundHandlerConfig>(2, 'outbound', $pb.PbFieldType.PM,OutboundHandlerConfig.create)
-    ..pc<$3.TypedMessage>(4, 'app', $pb.PbFieldType.PM,$3.TypedMessage.create)
-    ..a<$9.Config>(5, 'transport', $pb.PbFieldType.OM, $9.Config.getDefault, $9.Config.create)
-    ..pc<$3.TypedMessage>(6, 'extension', $pb.PbFieldType.PM,$3.TypedMessage.create)
+    ..pc<$4.TypedMessage>(4, 'app', $pb.PbFieldType.PM,$4.TypedMessage.create)
+    ..a<$10.Config>(5, 'transport', $pb.PbFieldType.OM, $10.Config.getDefault, $10.Config.create)
+    ..pc<$4.TypedMessage>(6, 'extension', $pb.PbFieldType.PM,$4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -41,25 +41,25 @@ class Config extends $pb.GeneratedMessage {
 
   $core.List<OutboundHandlerConfig> get outbound => $_getList(1);
 
-  $core.List<$3.TypedMessage> get app => $_getList(2);
+  $core.List<$4.TypedMessage> get app => $_getList(2);
 
   @$core.Deprecated('This field is deprecated.')
-  $9.Config get transport => $_getN(3);
+  $10.Config get transport => $_getN(3);
   @$core.Deprecated('This field is deprecated.')
-  set transport($9.Config v) { setField(5, v); }
+  set transport($10.Config v) { setField(5, v); }
   @$core.Deprecated('This field is deprecated.')
   $core.bool hasTransport() => $_has(3);
   @$core.Deprecated('This field is deprecated.')
   void clearTransport() => clearField(5);
 
-  $core.List<$3.TypedMessage> get extension => $_getList(4);
+  $core.List<$4.TypedMessage> get extension => $_getList(4);
 }
 
 class InboundHandlerConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InboundHandlerConfig', package: const $pb.PackageName('v2ray.core'))
     ..aOS(1, 'tag')
-    ..a<$3.TypedMessage>(2, 'receiverSettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
-    ..a<$3.TypedMessage>(3, 'proxySettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'receiverSettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
+    ..a<$4.TypedMessage>(3, 'proxySettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..hasRequiredFields = false
   ;
 
@@ -82,13 +82,13 @@ class InboundHandlerConfig extends $pb.GeneratedMessage {
   $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
-  $3.TypedMessage get receiverSettings => $_getN(1);
-  set receiverSettings($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get receiverSettings => $_getN(1);
+  set receiverSettings($4.TypedMessage v) { setField(2, v); }
   $core.bool hasReceiverSettings() => $_has(1);
   void clearReceiverSettings() => clearField(2);
 
-  $3.TypedMessage get proxySettings => $_getN(2);
-  set proxySettings($3.TypedMessage v) { setField(3, v); }
+  $4.TypedMessage get proxySettings => $_getN(2);
+  set proxySettings($4.TypedMessage v) { setField(3, v); }
   $core.bool hasProxySettings() => $_has(2);
   void clearProxySettings() => clearField(3);
 }
@@ -96,8 +96,8 @@ class InboundHandlerConfig extends $pb.GeneratedMessage {
 class OutboundHandlerConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutboundHandlerConfig', package: const $pb.PackageName('v2ray.core'))
     ..aOS(1, 'tag')
-    ..a<$3.TypedMessage>(2, 'senderSettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
-    ..a<$3.TypedMessage>(3, 'proxySettings', $pb.PbFieldType.OM, $3.TypedMessage.getDefault, $3.TypedMessage.create)
+    ..a<$4.TypedMessage>(2, 'senderSettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
+    ..a<$4.TypedMessage>(3, 'proxySettings', $pb.PbFieldType.OM, $4.TypedMessage.getDefault, $4.TypedMessage.create)
     ..aInt64(4, 'expire')
     ..aOS(5, 'comment')
     ..hasRequiredFields = false
@@ -122,13 +122,13 @@ class OutboundHandlerConfig extends $pb.GeneratedMessage {
   $core.bool hasTag() => $_has(0);
   void clearTag() => clearField(1);
 
-  $3.TypedMessage get senderSettings => $_getN(1);
-  set senderSettings($3.TypedMessage v) { setField(2, v); }
+  $4.TypedMessage get senderSettings => $_getN(1);
+  set senderSettings($4.TypedMessage v) { setField(2, v); }
   $core.bool hasSenderSettings() => $_has(1);
   void clearSenderSettings() => clearField(2);
 
-  $3.TypedMessage get proxySettings => $_getN(2);
-  set proxySettings($3.TypedMessage v) { setField(3, v); }
+  $4.TypedMessage get proxySettings => $_getN(2);
+  set proxySettings($4.TypedMessage v) { setField(3, v); }
   $core.bool hasProxySettings() => $_has(2);
   void clearProxySettings() => clearField(3);
 

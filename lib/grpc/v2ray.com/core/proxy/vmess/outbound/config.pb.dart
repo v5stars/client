@@ -9,11 +9,11 @@ import 'dart:core' as $core show bool, Deprecated, double, int, List, Map, overr
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../common/protocol/server_spec.pb.dart' as $13;
+import '../../../common/protocol/server_spec.pb.dart' as $14;
 
 class Config extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Config', package: const $pb.PackageName('v2ray.core.proxy.vmess.outbound'))
-    ..pc<$13.ServerEndpoint>(1, 'receiver', $pb.PbFieldType.PM,$13.ServerEndpoint.create)
+    ..pc<$14.ServerEndpoint>(1, 'receiver', $pb.PbFieldType.PM,$14.ServerEndpoint.create)
     ..hasRequiredFields = false
   ;
 
@@ -31,6 +31,6 @@ class Config extends $pb.GeneratedMessage {
   static Config getDefault() => _defaultInstance ??= create()..freeze();
   static Config _defaultInstance;
 
-  $core.List<$13.ServerEndpoint> get receiver => $_getList(0);
+  $core.List<$14.ServerEndpoint> get receiver => $_getList(0);
 }
 
